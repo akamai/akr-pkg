@@ -19,4 +19,8 @@ export KEYNAME=nityagi@akamai.com
     apt-ftparchive release . > Release
     gpg --default-key "${KEYNAME}" -abs -o - Release > Release.gpg
     gpg --default-key "${KEYNAME}" --clearsign -o - Release > InRelease
+    
+    cd ../
+
+    createrepo --update ./rpm
 )
