@@ -7,7 +7,7 @@ deb/rpm repository for akr
 curl -SsL https://akamai.github.io/akr-pkg/debian/KEY.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/akr.list https://akamai.github.io/akr-pkg/debian/akr.list
 sudo apt update
-sudo apt install kr
+sudo apt install akr
 ```
 
 ## RHEL/CentOS
@@ -23,6 +23,6 @@ gpgcheck=0
 enabled=1
 
 $ sudo yum -y update
-$ sudo yum -y install kr
+$ sudo yum -y install akr
 ```
 
