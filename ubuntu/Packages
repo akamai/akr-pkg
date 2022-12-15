@@ -1,14 +1,14 @@
 Package: akr
-Version: 0.1.0
+Version: 1.1.1
 Architecture: amd64
 Maintainer: Alex Grinman <agrinman@akamai.com>
-Installed-Size: 7760
-Depends: libc6 (>= 2.27)
-Filename: ./akr_0.1.0_amd64.deb
-Size: 2256032
-MD5sum: e55702b8bb57ceace8fa4602968e6fe3
-SHA1: 4b7e52aba26911539e950190d3cfb184887bd495
-SHA256: 2177f18581781088c16e0d1ad18fbec8703b9662961bdeeb29f705d58d12e211
+Installed-Size: 8728
+Depends: libssl1.1 (>= 1.1.1), libc6 (>= 2.29)
+Filename: ./akr_1.1.1_amd64.deb
+Size: 2600200
+MD5sum: e65060e0dff5b4a8af1da67e599e3595
+SHA1: 40793603d924c5b0d45250828ec6b66e29e0024e
+SHA256: 4f787a744feeba3bee1c3d9991a375ce8fe86bf0abe7805f5abf84864e79a5c8
 Priority: optional
 Description: Akamai MFA Developer CLI and SSH Agent
 

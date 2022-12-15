@@ -3,7 +3,7 @@
 set -e
 set -v
 
-export KEYNAME=nityagi@akamai.com
+export KEYNAME=dl-pushmfa@akamai.com
 
 (
     set -e
