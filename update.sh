@@ -23,4 +23,7 @@ export KEYNAME=dl-pushmfa@akamai.com
     cd ../
 
     createrepo --update ./rpm
+
+    createrepo --update ./rpm-9
+
 )
