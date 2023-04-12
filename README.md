@@ -26,3 +26,18 @@ $ sudo yum -y update
 $ sudo yum -y install akr
 ```
 
+
+## RHEL-9/CentOS-9
+
+Add repository setting
+
+```
+$ sudo vim /etc/yum.repos.d/akr.repo
+[akr]
+name=akr repository
+baseurl=https://akamai.github.io/akr-pkg/rpm-9/
+gpgcheck=0
+enabled=1
+
+$ sudo yum -y update
+$ sudo yum -y install akr
