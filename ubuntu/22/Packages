@@ -1,0 +1,14 @@
+Package: akr
+Version: 1.2.2-1
+Architecture: amd64
+Maintainer: Akamai Support <support@akamai.com>
+Installed-Size: 12089
+Depends: libc6 (>= 2.34), libssl3 (>= 3.0.0~~alpha1)
+Filename: ./akr_1.2.2_ubuntu22_amd64.deb
+Size: 3364088
+MD5sum: b4f0112e24a2ef97df97e45405e4e84e
+SHA1: 5b24469db8b20448d8ede71a8dd5e1830074b1d2
+SHA256: c08000ecaa63a5873008283b49c3ac5f2cd1c865fd28dce61a4d550a2d0b7602
+Priority: optional
+Description: Akamai MFA Developer CLI and SSH Agent
+
