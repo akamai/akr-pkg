@@ -1,14 +1,28 @@
 Package: akr
-Version: 1.2.2-1
+Version: 1.2.3-1
+Architecture: arm64
+Maintainer: Akamai Support <support@akamai.com>
+Installed-Size: 10194
+Depends: libc6 (>= 2.39), libssl3t64 (>= 3.0.0)
+Filename: ./akr_1.2.3_ubuntu26_arm64.deb
+Size: 2916124
+MD5sum: f31df17c2032728744bcb45a43b8cfdd
+SHA1: 516509c493db3f33a0fefdc594b14535c840b6fc
+SHA256: 9a871f43bf34675bc384d201b975812954ae9803260ce14b01f7709ef93ddeba
+Priority: optional
+Description: Akamai MFA Developer CLI and SSH Agent
+
+Package: akr
+Version: 1.2.3-1
 Architecture: amd64
 Maintainer: Akamai Support <support@akamai.com>
 Installed-Size: 12128
 Depends: libc6 (>= 2.39), libssl3t64 (>= 3.0.0)
-Filename: ./akr_1.2.2_ubuntu26_amd64.deb
-Size: 3390656
-MD5sum: f83a34d50d928bda908c62ca67a06b78
-SHA1: 927f5b67acf24a615352332e7c7d1d9554ff9078
-SHA256: 7f738852ddaccce41866dd8d693c50b0ba8d0304130239ab4942552933b77987
+Filename: ./akr_1.2.3_ubuntu26_amd64.deb
+Size: 3391100
+MD5sum: 532b72f66dc26b819aa2040b2e18a938
+SHA1: cf3e1684d9cc64beaacdaaea8b6ec210b072972c
+SHA256: 3d06d183e842c43fd3c748000f8edde34d267fa0594f5c8e2aa66cda8f92693b
 Priority: optional
 Description: Akamai MFA Developer CLI and SSH Agent
 
