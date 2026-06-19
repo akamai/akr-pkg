@@ -1,43 +1,50 @@
 # akr
-deb/rpm repository for akr
+deb/rpm repository for [akr](https://github.com/akamai/akr)
 
-## Debian/Ubuntu
+The signing key is published at https://akamai.github.io/akr-pkg/KEY.gpg.
+
+## Ubuntu
+
+Supported: 22.04, 24.04, 26.04. Replace `<VERSION>` with `22`, `24`, or `26`.
 
 ```bash
-curl -SsL https://akamai.github.io/akr-pkg/ubuntu/KEY.gpg | sudo apt-key add -
-sudo curl -SsL -o /etc/apt/sources.list.d/akr.list https://akamai.github.io/akr-pkg/ubuntu/akr.list
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -SsL https://akamai.github.io/akr-pkg/KEY.gpg \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/akr.gpg
+echo "deb [signed-by=/etc/apt/keyrings/akr.gpg] https://akamai.github.io/akr-pkg/ubuntu/<VERSION> ./" \
+  | sudo tee /etc/apt/sources.list.d/akr.list
 sudo apt update
 sudo apt install akr
 ```
 
-## RHEL/CentOS
+## RHEL / Rocky Linux
 
-Add repository setting
+Supported: 8, 9, 10. Replace `<VERSION>` with `8`, `9`, or `10`.
 
-```
-$ sudo vim /etc/yum.repos.d/akr.repo
+```bash
+sudo tee /etc/yum.repos.d/akr.repo <<'EOF'
 [akr]
 name=akr repository
-baseurl=https://akamai.github.io/akr-pkg/rpm/
-gpgcheck=0
+baseurl=https://akamai.github.io/akr-pkg/rhel/<VERSION>/
+gpgcheck=1
+gpgkey=https://akamai.github.io/akr-pkg/KEY.gpg
 enabled=1
-
-$ sudo yum -y update
-$ sudo yum -y install akr
+EOF
+sudo yum -y install akr
 ```
 
+## CentOS Stream
 
-## RHEL-9/CentOS-9
+Supported: 9, 10. Replace `<VERSION>` with `9` or `10`.
 
-Add repository setting
-
-```
-$ sudo vim /etc/yum.repos.d/akr.repo
+```bash
+sudo tee /etc/yum.repos.d/akr.repo <<'EOF'
 [akr]
 name=akr repository
-baseurl=https://akamai.github.io/akr-pkg/rpm-9/
-gpgcheck=0
+baseurl=https://akamai.github.io/akr-pkg/centos/<VERSION>/
+gpgcheck=1
+gpgkey=https://akamai.github.io/akr-pkg/KEY.gpg
 enabled=1
-
-$ sudo yum -y update
-$ sudo yum -y install akr
+EOF
+sudo yum -y install akr
+```
