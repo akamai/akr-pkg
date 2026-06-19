@@ -1,6 +1,8 @@
 # akr
 deb/rpm repository for [akr](https://github.com/akamai/akr)
 
+Both `x86_64`/`amd64` and `aarch64`/`arm64` are supported; apt and dnf will install the package matching your host architecture.
+
 The signing key is published at https://akamai.github.io/akr-pkg/akr-keyring.gpg.
 
 ## Ubuntu

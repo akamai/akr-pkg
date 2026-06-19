@@ -43,20 +43,26 @@ jobs:
           for v in $UBUNTU_VERSIONS; do
             mkdir -p "ubuntu/$v"
             rm -f "ubuntu/$v"/*.deb
-            gh release download "$RELEASE_TAG" --repo akamai/akr \
-              --pattern "akr_${RELEASE_TAG}_ubuntu${v}_amd64.deb" --dir "ubuntu/$v"
+            for arch in amd64 arm64; do
+              gh release download "$RELEASE_TAG" --repo akamai/akr \
+                --pattern "akr_${RELEASE_TAG}_ubuntu${v}_${arch}.deb" --dir "ubuntu/$v"
+            done
           done
           for v in $RHEL_VERSIONS; do
             mkdir -p "rhel/$v"
             rm -f "rhel/$v"/*.rpm
-            gh release download "$RELEASE_TAG" --repo akamai/akr \
-              --pattern "akr_${RELEASE_TAG}_rhel${v}_x86_64.rpm" --dir "rhel/$v"
+            for arch in x86_64 aarch64; do
+              gh release download "$RELEASE_TAG" --repo akamai/akr \
+                --pattern "akr_${RELEASE_TAG}_rhel${v}_${arch}.rpm" --dir "rhel/$v"
+            done
           done
           for v in $CENTOS_VERSIONS; do
             mkdir -p "centos/$v"
             rm -f "centos/$v"/*.rpm
-            gh release download "$RELEASE_TAG" --repo akamai/akr \
-              --pattern "akr_${RELEASE_TAG}_centos${v}_x86_64.rpm" --dir "centos/$v"
+            for arch in x86_64 aarch64; do
+              gh release download "$RELEASE_TAG" --repo akamai/akr \
+                --pattern "akr_${RELEASE_TAG}_centos${v}_${arch}.rpm" --dir "centos/$v"
+            done
           done
 
       - name: Regenerate Debian metadata
