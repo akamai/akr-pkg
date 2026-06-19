@@ -16,7 +16,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     env:
-      KEYNAME: dl-pushmfa@akamai.com
+      KEYNAME: support@akamai.com
       RELEASE_TAG: ${{ inputs.release_tag }}
       UBUNTU_VERSIONS: '22 24 26'
       RHEL_VERSIONS: '8 9 10'

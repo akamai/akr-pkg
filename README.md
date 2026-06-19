@@ -1,7 +1,7 @@
 # akr
 deb/rpm repository for [akr](https://github.com/akamai/akr)
 
-The signing key is published at https://akamai.github.io/akr-pkg/KEY.gpg.
+The signing key is published at https://akamai.github.io/akr-pkg/akr-keyring.gpg.
 
 ## Ubuntu
 
@@ -9,7 +9,7 @@ Supported: 22.04, 24.04, 26.04. Replace `<VERSION>` with `22`, `24`, or `26`.
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
-curl -SsL https://akamai.github.io/akr-pkg/KEY.gpg \
+curl -SsL https://akamai.github.io/akr-pkg/akr-keyring.gpg \
   | sudo gpg --dearmor -o /etc/apt/keyrings/akr.gpg
 echo "deb [signed-by=/etc/apt/keyrings/akr.gpg] https://akamai.github.io/akr-pkg/ubuntu/<VERSION> ./" \
   | sudo tee /etc/apt/sources.list.d/akr.list
@@ -27,7 +27,7 @@ sudo tee /etc/yum.repos.d/akr.repo <<'EOF'
 name=akr repository
 baseurl=https://akamai.github.io/akr-pkg/rhel/<VERSION>/
 gpgcheck=1
-gpgkey=https://akamai.github.io/akr-pkg/KEY.gpg
+gpgkey=https://akamai.github.io/akr-pkg/akr-keyring.gpg
 enabled=1
 EOF
 sudo yum -y install akr
@@ -43,7 +43,7 @@ sudo tee /etc/yum.repos.d/akr.repo <<'EOF'
 name=akr repository
 baseurl=https://akamai.github.io/akr-pkg/centos/<VERSION>/
 gpgcheck=1
-gpgkey=https://akamai.github.io/akr-pkg/KEY.gpg
+gpgkey=https://akamai.github.io/akr-pkg/akr-keyring.gpg
 enabled=1
 EOF
 sudo yum -y install akr
